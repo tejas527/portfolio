@@ -1,26 +1,60 @@
+"use client";
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
+import NavLink from './NavLink'
+import { Bars3Icon, XmarkIcon } from '@heroicons/react/24/outline';
+import MenuOverlay from './MenuOverlay';
+
+const navLinks = [
+    {
+        title:"About",
+        path:"about",
+    },
+    {
+        title:"Projects",
+        path:"#projects",
+    },
+    {
+        title:"Contact",
+        path:"#contact",
+    }    
+]
 
 const Navbar = () => {
-  return (
-    <nav>
-        <div className='flex flex-wrap items-center justify-between mx-auto p-8'>
-            <Link href={"/"} className='text-5xl text-black font-semibold'>
+    const [navbarOpen, setNavbarOpen] = useState(false);
+    
+    return (
+    <nav className='fixed top-0 left-0 right-0 z-10 bg-opacity-90'>
+        <div className='flex flex-wrap items-center justify-between mx-auto py-4 pr-4 pt-2'>
+            <Link href={"/"} className='text-xl md:text-5xl text-black font-semibold'>
                 LOGO
             </Link>
+            <div className='mobile-menu block md:hidden'>
+                {
+                    !navbarOpen ? (
+                        <button onClick={() => setNavbarOpen(true)} className='flex items-centerpx-3 py-2 border rounded border-slate-900 text-slate-900 hover:text-black hover:border-black'>
+                            <Bars3Icon className='h-5 w-5'/>
+                        </button>
+                    ) : (
+                        <button onClick={() => setNavbarOpen(false)} className='flex items-centerpx-3 py-2 border rounded border-slate-900 text-slate-900 hover:text-black hover:border-black'>
+                            <XmarkIcon className='h-5 w-5'/>
+                        </button>
+                    )
+                }
+            </div>
             <div className='menu hidden md:block md'>
-                <ul>
-                    <li>
-                        <Link 
-                            href={"#about"} 
-                            className='block py-2 pl-3 pr-4 text-[#4a4f53] rounded md:p-0 hover:text-black'
-                            >
-                                About
-                            </Link>
-                    </li>
+                <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 mt-8'>
+                    {
+                        navLinks.map((link, index) => (
+                            <li key={index}>
+                                <NavLink href={link.path} title={link.title}/>
+                            </li>
+                        ))
+                    }
                 </ul>
             </div>
         </div>
+        {navbarOpen ? <MenuOverlay links={navLinks} /> : null}
     </nav>
   )
 }

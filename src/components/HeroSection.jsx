@@ -27,11 +27,11 @@ const HeroSection = () => {
                     />
                 </h1>
                 <p className='text-black text-base sm:text-lg mb-6 lg:text-xl '>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Culpa blanditiis in laboriosam ipsam illo quaerat sapiente quo neque veniam pariatur obcaecati, mollitia optio? Neque hic voluptate architecto! Consequuntur, assumenda mollitia?
+                    
                 </p>
                 <div>
-                    <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 bg-black hover:bg-slate-800 text-white'>Hire Me</button>
-                    <button className='px-6 py-3 w-full sm:w-fit rounded-full bg-grad bg-black hover:bg-slate-500 text-white border border-white mt-3'>Download CV</button>
+                    <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-black hover:bg-slate-800 text-white'>Hire Me</button>
+                    <button className='px-6 py-3 w-full sm:w-fit rounded-full bg-black hover:bg-slate-500 text-white border border-white mt-3'>Download CV</button>
                 </div>
             </div>
             <div className='col-span-5 place-self-center mt-4 lg:mt-0'>
@@ -39,7 +39,7 @@ const HeroSection = () => {
                     <Image
                         src="/images/hero-image.png"
                         alt="hero image"
-                        className='absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left -1/2'
+                        className='absolute inset-0 m-auto w-full h-full object-cover rounded-full'
                         width={300}
                         height={300}
                     />
