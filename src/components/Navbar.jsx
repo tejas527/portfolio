@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import React, { useState } from 'react'
 import NavLink from './NavLink'
-import { Bars3Icon, XmarkIcon } from '@heroicons/react/24/outline';
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import MenuOverlay from './MenuOverlay';
 
 const navLinks = [
@@ -24,7 +24,7 @@ const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
     
     return (
-    <nav className='fixed top-0 left-0 right-0 z-10 bg-opacity-90'>
+    <nav className='fixed top-0 left-0 right-0 z-10 bg-opacity-90 bg-orange-50'>
         <div className='flex flex-wrap items-center justify-between mx-auto py-4 pr-4 pt-2'>
             <Link href={"/"} className='text-xl md:text-5xl text-black font-semibold'>
                 LOGO
@@ -37,7 +37,7 @@ const Navbar = () => {
                         </button>
                     ) : (
                         <button onClick={() => setNavbarOpen(false)} className='flex items-centerpx-3 py-2 border rounded border-slate-900 text-slate-900 hover:text-black hover:border-black'>
-                            <XmarkIcon className='h-5 w-5'/>
+                            <XMarkIcon className='h-5 w-5'/>
                         </button>
                     )
                 }

@@ -70,8 +70,8 @@ const AboutSection = () => {
             <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
                 <h2 className='text-4xl font-bold text-black mb-4'>About Me</h2>
                 <p className='text-base lg:text-lg'>
-                I’m a passionate Machine Learning 
-                Enthusiast and Full-Stack Developer,
+                 I’m a passionate Machine Learning 
+                 Enthusiast and Full-Stack Developer,
                  currently pursuing my Computer 
                  Science Engineering degree at 
                  SRMIST. I specialize in building 
