@@ -29,11 +29,11 @@ const TAB_DATA = [
         id:"education",
         content: (
             <ul>
-                <li className='text-bold list-disc pl-2'>B.Tech. Computer Science and Engineering </li>
+                <li className='font-bold list-disc pl-2'>B.Tech. Computer Science and Engineering </li>
                 <li>S.R.M. Institue of Science and Technology, KTR</li> 
-                <li className='text-bold list-disc pl-2'>High School  </li>
+                <li className='font-bold list-disc pl-2'>High School  </li>
                 <li>Namo Rims Junior College, Pune </li>
-                <li className='text-bold list-disc pl-2'>Middle School </li>
+                <li className='font-bold list-disc pl-2'>Middle School </li>
                 <li>Pawar Public School, Pune</li>
             </ul>
         )

@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import NavLink from './NavLink'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import MenuOverlay from './MenuOverlay';
@@ -22,9 +22,25 @@ const navLinks = [
 
 const Navbar = () => {
     const [navbarOpen, setNavbarOpen] = useState(false);
+    const [lastScrollY, setLastScrollY] = useState(0);
+    const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > lastScrollY) {
+                setVisible(false); 
+            } else {
+                setVisible(true); 
+            }
+            setLastScrollY(window.scrollY);
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, [lastScrollY]);
     
     return (
-    <nav className='fixed top-0 left-0 right-0 z-10 bg-opacity-90 bg-orange-50'>
+    <nav className={`fixed top-0 left-0 right-0 z-10 bg-opacity-90 bg-[#f0e7e7] transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className='flex flex-wrap items-center justify-between mx-auto py-4 pr-4 pt-2'>
             <Link href={"/"} className='text-xl md:text-5xl text-black font-semibold'>
                 LOGO
