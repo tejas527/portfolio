@@ -29,11 +29,11 @@ const TAB_DATA = [
         id:"education",
         content: (
             <ul>
-                <li className='text-bold'>B.Tech. Computer Science and Engineering </li>
+                <li className='text-bold list-disc pl-2'>B.Tech. Computer Science and Engineering </li>
                 <li>S.R.M. Institue of Science and Technology, KTR</li> 
-                <li className='text-bold'>High School  </li>
+                <li className='text-bold list-disc pl-2'>High School  </li>
                 <li>Namo Rims Junior College, Pune </li>
-                <li className='text-bold'>Middle School </li>
+                <li className='text-bold list-disc pl-2'>Middle School </li>
                 <li>Pawar Public School, Pune</li>
             </ul>
         )
@@ -42,7 +42,7 @@ const TAB_DATA = [
         title:"Certifications",
         id:"certifications",
         content: (
-            <ul>
+            <ul className='list-disc pl-2'>
                 <li>NPTEL in Java</li>
             </ul>
         )
