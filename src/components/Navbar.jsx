@@ -61,10 +61,10 @@ const Navbar = () => {
             </div>
             <div className='menu hidden md:block md'>
                 <div className='flex justify-center space-x-4 mb-2'>
-                        <Link href="https://github.com" target="_blank">
+                        <Link href="https://github.com/tejas527" target="_blank">
                             <FaGithub className="text-2xl text-gray-800 hover:text-black" />
                         </Link>
-                        <Link href="https://linkedin.com" target="_blank">
+                        <Link href="https://www.linkedin.com/in/tejas-dumbhare-0823632b9/" target="_blank">
                             <FaLinkedin className="text-2xl text-blue-700 hover:text-blue-800" />
                         </Link>
                         <Link href="https://instagram.com" target="_blank">

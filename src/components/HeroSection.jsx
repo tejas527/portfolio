@@ -8,7 +8,7 @@ const HeroSection = () => {
     <section>
         <div className='grid grid-cols-1 lg:grid-cols-20'>
             <div className='col-span-12 place-self-center text-center sm:text-left'>
-                <h1 className="text-black mb-4 text-4xl sm:text-5xl lg:text-6xl font-extrabold">
+                <h1 className="text-black mb-4 text-3xl sm:text-5xl lg:text-6xl font-extrabold">
                     Hello I'm Tejas, 
                     <br/>
                     {" "}
@@ -26,12 +26,9 @@ const HeroSection = () => {
                         repeat={Infinity}
                     />
                 </h1>
-                <p className='text-black text-base sm:text-lg mb-6 lg:text-xl '>
-                    
-                </p>
                 <div className=''>
-                    <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 bg-black hover:bg-slate-800 text-white'>Here's My Resume</button>
-                    <button className='px-6 py-3 w-full sm:w-fit rounded-full bg-black hover:bg-slate-500 text-white border border-white mt-3'>Email</button>
+                    <button className='px-6 py-3 w-full sm:w-fit rounded-full mr-4 cursor-pointer bg-black hover:bg-gray-900 text-white'>Here's My Resume</button>
+                    <button className='px-6 py-3 w-full sm:w-fit rounded-full cursor-pointer bg-black hover:bg-gray-900 text-white border border-white mt-3'>Email</button>
                 </div>
             </div>
             <div className='col-span-8 place-self-center mt-4 lg:mt-0'>

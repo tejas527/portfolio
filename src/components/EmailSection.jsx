@@ -25,7 +25,10 @@ const EmailSection = () => {
           </h5>
           <div>
             <p className='font-bold'>Email</p>
-            tejasdumbhare@gmail.com
+            <Link 
+            href="mailto:tejasdumbhare@gmail.com" 
+            className='text-blue-700 hover:text-blue-600'>
+              tejasdumbhare@gmail.com</Link>
           </div>
           <div>
             <p className='font-bold'>Location</p>
@@ -36,7 +39,7 @@ const EmailSection = () => {
           </p>
           <div className='socials flex flex-row gap-2'>
               <Link 
-                href="github.com">
+                href="https://github.com/tejas527">
                 <FaGithub className="text-3xl text-gray-800 hover:text-black"/>
               </Link>
               <Link 
