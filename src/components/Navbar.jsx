@@ -2,6 +2,7 @@
 import Link from 'next/link'
 import React, { useState, useEffect } from 'react'
 import NavLink from './NavLink'
+import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import MenuOverlay from './MenuOverlay';
 
@@ -59,7 +60,21 @@ const Navbar = () => {
                 }
             </div>
             <div className='menu hidden md:block md'>
-                <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 mt-8'>
+                <div className='flex justify-center space-x-4 mb-2'>
+                        <Link href="https://github.com" target="_blank">
+                            <FaGithub className="text-2xl text-gray-800 hover:text-black" />
+                        </Link>
+                        <Link href="https://linkedin.com" target="_blank">
+                            <FaLinkedin className="text-2xl text-blue-700 hover:text-blue-800" />
+                        </Link>
+                        <Link href="https://instagram.com" target="_blank">
+                            <FaInstagram className="text-2xl text-pink-500 hover:text-pink-600" />
+                        </Link>
+                        <Link href="https://twitter.com" target="_blank">
+                            <FaTwitter className="text-2xl text-blue-400 hover:text-blue-500" />
+                        </Link>
+                </div>
+                <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0'>
                     {
                         navLinks.map((link, index) => (
                             <li key={index}>
