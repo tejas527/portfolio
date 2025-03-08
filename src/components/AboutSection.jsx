@@ -40,18 +40,18 @@ const TAB_DATA = [
 ]
 
 const skills = [
-    { name: "C", icon: "/images/icons8-c.svg" }, 
-    { name: "C++", icon: "/images/icons8-cpp.svg" }, 
-    { name: "Java", icon: "/images/icons8-java.svg" }, 
-    { name: "MySQL", icon: "/images/icons8-mysql.svg" }, 
-    { name: "PostgreSQL", icon: "/images/icons8-postgresql.svg" }, 
-    { name: "JavaScript", icon: "/images/icons8-javascript.svg" },
-    { name: "React", icon: "/images/icons8-react.svg" }, 
-    { name: "Node.js", icon: "/images/icons8-node-js.svg" }, 
-    { name: "Express", icon: "/images/icons8-express-js.svg" },
-    { name: "Next.js", icon: <SiNextdotjs className='text-3xl pl-2'/> },
-    { name: "TailwindCSS", icon: "/images/icons8-tailwindcss.svg" },
-    { name: "Python", icon: "/images/icons8-python.svg" },
+    { name: "C", src: "icons8-c.svg" }, 
+    { name: "C++", src: "icons8-c++.svg" }, 
+    { name: "Java", src: "icons8-java.svg" }, 
+    { name: "MySQL", src: "icons8-mysql.svg" }, 
+    { name: "PostgreSQL", src: "icons8-postgresql.svg" }, 
+    { name: "JavaScript", src: "icons8-javascript.svg" },
+    { name: "React", src: "icons8-react.svg" }, 
+    { name: "Node.js", src: "icons8-node-js.svg" }, 
+    { name: "Express", src: "icons8-express-js.svg" },
+    { name: "Next.js", jsx: <SiNextdotjs className='text-4xl'/> }, // Use jsx property instead of src
+    { name: "TailwindCSS", src: "icons8-tailwindcss.svg" },
+    { name: "Python", src: "icons8-python.svg" },
 ];
 
 const AboutSection = () => {
@@ -73,7 +73,7 @@ const AboutSection = () => {
                 </h2>
                 <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 text-white">
                     {skills.map((skill, index) => (
-                        <ToolsCard key={index} name={skill.name} icon={skill.icon} />
+                        <ToolsCard key={index} name={skill.name} icon={skill.src || skill.jsx} />
                     ))}
                 </div>
             </div>  
