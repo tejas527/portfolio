@@ -7,15 +7,15 @@ const projectsData = [
         title:"Next.js Portfolio Website",
         description: "Portfolio Website",
         image: "/images/projects/1.png",
-        gitUrl:"/",
-        previewUrl:"/"
+        gitUrl:"https://github.com/tejas527/portfolio",
+        previewUrl:"https://tejasdumbhare-profile.vercel.app/"
     },
     {
         id:2,
         title:"React Weather Website",
         description: "Real-time Weather dashboard",
-        image: "/images/projects/2.png",
-        gitUrl:"/",
+        image: "/images/projects/chennai-w-new.png",
+        gitUrl:"https://github.com/tejas527/weather-app",
         previewUrl:"/"
     },
     {
@@ -23,7 +23,7 @@ const projectsData = [
         title:"E-commerce Application",
         description: "Project 3 description",
         image: "/images/projects/4.png",
-        gitUrl:"/",
+        gitUrl:"https://github.com/tejas527/E-Com",
         previewUrl:"/"
     }
 ]

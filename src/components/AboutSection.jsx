@@ -10,12 +10,12 @@ const TAB_DATA = [
         id:"education",
         content: (
             <ul>
-                <li className='font-bold list-disc pl-2'>B.Tech. Computer Science and Engineering </li>
-                <li>S.R.M. Institue of Science and Technology, KTR</li> 
-                <li className='font-bold list-disc pl-2'>High School  </li>
-                <li>Namo Rims Junior College, Pune </li>
-                <li className='font-bold list-disc pl-2'>Middle School </li>
-                <li>Pawar Public School, Pune</li>
+                <li className='font-bold'>B.Tech. Computer Science and Engineering </li>
+                <li className='mb-2'>S.R.M. Institue of Science and Technology, KTR</li> 
+                <li className='font-bold'>High School  </li>
+                <li className='mb-2'>Namo Rims Junior College, Pune </li>
+                <li className='font-bold'>Middle School </li>
+                <li className='mb-2'>Pawar Public School, Pune</li>
             </ul>
         )
     },
@@ -23,7 +23,7 @@ const TAB_DATA = [
         title:"Certifications",
         id:"certifications",
         content: (
-            <ul className='list-disc pl-2'>
+            <ul className='font-bold'>
                 <li>NPTEL in Java</li>
             </ul>
         )
@@ -32,8 +32,8 @@ const TAB_DATA = [
         title:"Experience",
         id:"experience",
         content: (
-            <ul className='list-disc pl-2'>
-                <li>C</li>
+            <ul className='font-bold'>
+                <li>Technical Member, dBug Labs SRMIST</li>
             </ul>
         )
     },

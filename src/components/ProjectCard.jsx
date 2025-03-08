@@ -12,11 +12,13 @@ const ProjectCard = ( { imgUrl, title, description, gitUrl, previewUrl }) => {
             <div className='overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-black bg-opacity-0 hidden group-hover:flex group-hover:bg-opacity-80 transition-all duration-500'>
                 <Link 
                 href={gitUrl}
+                target="_blank" rel="noopener noreferrer"
                 className='h-14 w-14 border-2 relative rounded-full border-white hover:border-white group/link mr-3'>
                     <CodeBracketIcon className='h-10 w-10 text-white absolute inset-0 m-auto cursor-pointer group-hover/link:text-white'/>
                 </Link>
                 <Link 
                 href={previewUrl}
+                target="_blank" rel="noopener noreferrer"
                 className='h-14 w-14 border-2 relative rounded-full border-white hover:border-white group/link'>
                     <EyeIcon className='h-10 w-10 text-white absolute inset-0 m-auto cursor-pointer group-hover/link:text-white'/>
                 </Link>
