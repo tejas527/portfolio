@@ -1,5 +1,6 @@
 "use client";
 import Link from 'next/link'
+import Image from 'next/image';
 import React, { useState, useEffect } from 'react'
 import NavLink from './NavLink'
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
@@ -43,8 +44,13 @@ const Navbar = () => {
     return (
     <nav className={`fixed top-0 left-0 right-0 z-10 bg-opacity-90 bg-[#f0e7e7] transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className='flex flex-wrap items-center justify-between mx-auto py-4 pr-4 pt-2'>
-            <Link href={"/"} className='text-xl md:text-5xl text-black font-semibold'>
-                LOGO
+            <Link href={"/"} className='text-xl md:text-5xl text-black font-semibold pl-4'>
+                <Image 
+                    src="/images/about-image.png" 
+                    alt="home"
+                    width={60} 
+                    height={60}
+                />
             </Link>
             <div className='mobile-menu block md:hidden'>
                 {

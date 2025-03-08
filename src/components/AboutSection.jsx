@@ -1,29 +1,9 @@
 "use client";
 import React, { useTransition, useState } from 'react'
-import Image from 'next/image'
 import TabButtion from './TabButtion';
+import ToolsCard from './ToolsCard';
 
 const TAB_DATA = [
-    {
-        title:"Skills",
-        id:"skills",
-        content: (
-            <ul className='list-disc pl-2'>
-                <li>C</li>
-                <li>C++</li>
-                <li>Java</li>
-                <li>MySQL</li>
-                <li>PostgreSQL</li>
-                <li>JavaScript</li>
-                <li>React</li>
-                <li>Node.js</li>
-                <li>Express</li>
-                <li>Next.js</li>
-                <li>TailwindCSS</li>
-                <li>Python</li>
-            </ul>
-        )
-    },
     {
         title:"Education",
         id:"education",
@@ -47,10 +27,34 @@ const TAB_DATA = [
             </ul>
         )
     },
+    {
+        title:"Experience",
+        id:"experience",
+        content: (
+            <ul className='list-disc pl-2'>
+                <li>C</li>
+            </ul>
+        )
+    },
 ]
 
+const skills = [
+    { name: "C", icon: "/public/images/icons8-c.svg" },
+    { name: "C++", icon: "/images/icons8-cpp.svg" },
+    { name: "Java", icon: "/images/icons8-java.svg" },
+    { name: "MySQL", icon: "/images/icons8-mysql.svg" },
+    { name: "PostgreSQL", icon: "/images/icons8-postgresql.svg" },
+    { name: "JavaScript", icon: "/images/icons8-javascript.svg" },
+    { name: "React", icon: "/images/icons8-react.svg" },
+    { name: "Node.js", icon: "/images/icons8-node-js.svg" },
+    { name: "Express", icon: "/images/icons8-express-js.svg" },
+    { name: "Next.js", icon: "/images/icons8-nextjs.svg" },
+    { name: "TailwindCSS", icon: "/images/icons8-tailwindcss.svg" },
+    { name: "Python", icon: "/images/icons8-python.svg" },
+];
+
 const AboutSection = () => {
-    const [tab, setTab] = useState("skills");
+    const [tab, setTab] = useState("education");
     const [isPending ,startTransition ] = useTransition();
 
     const handleTabChange = (id) => {
@@ -61,12 +65,17 @@ const AboutSection = () => {
 
     return (
     <section className='text-black'>
-        <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16'>
-            <Image 
-            src="/images/about-image.png" 
-            alt=""
-            width={500} 
-            height={500}/>
+        <div className='md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-0'>
+            <div className='container'>
+                <h2 className="text-3xl font-bold mb-4">
+                    Tools I use
+                </h2>
+                <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-4 text-white">
+                    {skills.map((skill, index) => (
+                        <ToolsCard key={index} name={skill.name} icon={skill.icon} />
+                    ))}
+                </div>
+            </div>  
             <div className='mt-4 md:mt-0 text-left flex flex-col h-full'>
                 <h2 className='text-4xl font-bold text-black mb-4'>About Me</h2>
                 <p className='text-base lg:text-lg'>
@@ -82,14 +91,14 @@ const AboutSection = () => {
                  Python.
                 </p>
                 <div className='flex flex-row justify-start mt-8'>
-                    <TabButtion selectTab={() => handleTabChange("skills")} active={tab === "skills"}>
-                        Skills
-                    </TabButtion>
                     <TabButtion selectTab={() => handleTabChange("education")} active={tab === "education"}>
                         Education
                     </TabButtion>
                     <TabButtion selectTab={() => handleTabChange("certifications")} active={tab === "certifications"}>
                         Certification
+                    </TabButtion>
+                    <TabButtion selectTab={() => handleTabChange("experience")} active={tab === "experience"}>
+                        Experience
                     </TabButtion>
                 </div>
                 <div className='mt-8'>{TAB_DATA.find((t) => t.id === tab).content}</div>
