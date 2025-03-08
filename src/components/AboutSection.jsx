@@ -2,6 +2,7 @@
 import React, { useTransition, useState } from 'react'
 import TabButtion from './TabButtion';
 import ToolsCard from './ToolsCard';
+import { SiNextdotjs } from "react-icons/si";
 
 const TAB_DATA = [
     {
@@ -39,16 +40,16 @@ const TAB_DATA = [
 ]
 
 const skills = [
-    { name: "C", icon: "/public/images/icons8-c.svg" },
-    { name: "C++", icon: "/images/icons8-cpp.svg" },
-    { name: "Java", icon: "/images/icons8-java.svg" },
-    { name: "MySQL", icon: "/images/icons8-mysql.svg" },
-    { name: "PostgreSQL", icon: "/images/icons8-postgresql.svg" },
+    { name: "C", icon: "/images/icons8-c.svg" }, 
+    { name: "C++", icon: "/images/icons8-cpp.svg" }, 
+    { name: "Java", icon: "/images/icons8-java.svg" }, 
+    { name: "MySQL", icon: "/images/icons8-mysql.svg" }, 
+    { name: "PostgreSQL", icon: "/images/icons8-postgresql.svg" }, 
     { name: "JavaScript", icon: "/images/icons8-javascript.svg" },
-    { name: "React", icon: "/images/icons8-react.svg" },
-    { name: "Node.js", icon: "/images/icons8-node-js.svg" },
+    { name: "React", icon: "/images/icons8-react.svg" }, 
+    { name: "Node.js", icon: "/images/icons8-node-js.svg" }, 
     { name: "Express", icon: "/images/icons8-express-js.svg" },
-    { name: "Next.js", icon: "/images/icons8-nextjs.svg" },
+    { name: "Next.js", icon: <SiNextdotjs className='text-3xl pl-2'/> },
     { name: "TailwindCSS", icon: "/images/icons8-tailwindcss.svg" },
     { name: "Python", icon: "/images/icons8-python.svg" },
 ];
