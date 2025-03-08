@@ -49,7 +49,7 @@ const skills = [
     { name: "React", src: "icons8-react.svg" }, 
     { name: "Node.js", src: "icons8-node-js.svg" }, 
     { name: "Express", src: "icons8-express-js.svg" },
-    { name: "Next.js", jsx: <SiNextdotjs className='text-4xl'/> }, // Use jsx property instead of src
+    { name: "Next.js", jsx: <SiNextdotjs className='text-4xl'/> },
     { name: "TailwindCSS", src: "icons8-tailwindcss.svg" },
     { name: "Python", src: "icons8-python.svg" },
 ];
