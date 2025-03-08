@@ -78,8 +78,8 @@ const AboutSection = () => {
                  intelligent and scalable 
                  applications using JavaScript, 
                  React, Next.js, Node.js, 
-                 Express.js, PostgreSQL, 
-                 Python, and TensorFlow.
+                 Express.js, PostgreSQL, and 
+                 Python.
                 </p>
                 <div className='flex flex-row justify-start mt-8'>
                     <TabButtion selectTab={() => handleTabChange("skills")} active={tab === "skills"}>

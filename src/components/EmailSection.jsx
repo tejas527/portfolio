@@ -1,15 +1,12 @@
 import React from 'react'
-import GitHubIcon from '../../public/github-icon.svg'
-import LinkedinIcon from '../../public/linkedin-icon.svg'
 import { FaGithub, FaLinkedin, FaInstagram, FaTwitter } from "react-icons/fa";
 import Link from 'next/link'
-import Image from 'next/image'
 
 const EmailSection = () => {
   return (
-    <section className='grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4'> 
+    <section className='grid md:grid-cols-2 my-8 md:my-8 py-12 gap-4'> 
         <div className=''>
-            <h5 className='text-xl font-bold text-black my-2'>
+            <h5 className='text-2xl font-bold text-black my-2'>
                 Let's Connect
             </h5>
             <p className='text-[#181818] mb-4 max-w-md'>
@@ -20,7 +17,7 @@ const EmailSection = () => {
             </p>
         </div>
         <div className='flex flex-col gap-4  text-black'>
-          <h5 className='text-xl font-bold text-black my-2'>
+          <h5 className='text-2xl font-bold text-black my-2'>
             Contact Me
           </h5>
           <div>

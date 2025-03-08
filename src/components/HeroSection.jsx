@@ -7,7 +7,7 @@ const HeroSection = () => {
   return (
     <section>
         <div className='grid grid-cols-1 lg:grid-cols-20'>
-            <div className='col-span-12 place-self-center text-center sm:text-left'>
+            <div className='col-span-13 mt-23 text-center sm:text-left'>
                 <h1 className="text-black mb-4 text-3xl sm:text-5xl lg:text-6xl font-extrabold">
                     Hello I'm Tejas, 
                     <br/>
@@ -31,7 +31,7 @@ const HeroSection = () => {
                     <button className='px-6 py-3 w-full sm:w-fit rounded-full cursor-pointer bg-black hover:bg-gray-900 text-white border border-white mt-3'>Email</button>
                 </div>
             </div>
-            <div className='col-span-8 place-self-center mt-4 lg:mt-0'>
+            <div className='col-span-6 place-self-center mt-4 lg:mt-0 lg:ml-25'>
                 <div className='rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative'>
                     <Image
                         src="/images/hero-image.png"
