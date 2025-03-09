@@ -6,9 +6,9 @@ import { TypeAnimation } from 'react-type-animation'
 
 const HeroSection = () => {
   return (
-    <section>
+    <section className='lg:py-16'>
         <div className='grid grid-cols-1 lg:grid-cols-20'>
-            <div className='col-span-13 mt-23 text-center sm:text-left'>
+            <div className='col-span-13 mt-23 text-center sm:text-left '>
                 <h1 className="text-black mb-4 text-3xl sm:text-5xl lg:text-6xl font-extrabold">
                     Hello I'm Tejas, 
                     <br/>
@@ -37,7 +37,8 @@ const HeroSection = () => {
                         </button>
                     </Link>
                     <Link  
-                    href="mailto:tejasdumbhare@gmail.com" 
+                    href="mailto:tejasdumbhare@gmail.com"
+                    target="_blank" rel="noopener noreferrer" 
                     className=''>
                         <button className='px-6 py-3 w-full sm:w-fit rounded-full cursor-pointer bg-black hover:bg-gray-900 text-white border border-white mt-3'>
                             Email
