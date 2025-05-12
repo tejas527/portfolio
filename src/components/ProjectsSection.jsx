@@ -18,14 +18,6 @@ const projectsData = [
         gitUrl:"https://github.com/tejas527/weather-app",
         previewUrl:"/"
     },
-    {
-        id:3,
-        title:"E-commerce Application",
-        description: "Project 3 description",
-        image: "/images/projects/4.png",
-        gitUrl:"https://github.com/tejas527/E-Com",
-        previewUrl:"/"
-    }
 ]
 
 const ProjectsSection = () => {
