@@ -42,7 +42,7 @@ const Navbar = () => {
     }, [lastScrollY]);
     
     return (
-    <nav className={`fixed border border-t-rose-100 top-0 left-0 right-0 z-10 bg-opacity-90 bg-[#f0e7e7] transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <nav className={`fixed border border-t-rose-100 top-0 left-0 right-0 z-10 bg-opacity-90 bg-gray transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
         <div className='flex flex-wrap items-center justify-between mx-auto lg:py-4 py-4 pr-4 pt-2'>
             <Link href={"/"} className='text-xl md:text-5xl text-black font-semibold pl-4'>
                 <Image 
